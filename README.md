@@ -58,7 +58,8 @@ Mail Proxmox üzerinde yapılacak ek bir ayar bulunmuyor. Temel olarak bunlar ye
 
 Aşağığdaki sayfa üzerinden sunucunuzun sürümünü kontrol ediniz. Eğer sunucu sürümünüz düşük ise yükselterek işlem sağlayınız.
 
-https://www.iredmail.org/download.html
+
+(iRedMail Release)[https://www.iredmail.org/download.html]
 
 Aşağıdaki komutları sırayla çalıştırınız:
 
