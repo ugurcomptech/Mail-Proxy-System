@@ -68,7 +68,7 @@ Aşağıdaki komutları sırayla çalıştırınız:
  bash iRedMail.sh
 ```
 
-**Not:**inke bir süre sonra erişilmeyebilir. Yukarıda bıraktığım iredmail sitesi üzerinden kontrol edebilirsiniz.
+**Not:** Linke bir süre sonra erişilmeyebilir. Yukarıda bıraktığım iredmail sitesi üzerinden kontrol edebilirsiniz.
 
 
 ![image](https://github.com/user-attachments/assets/ea76e914-d65c-4946-90a7-9a2496b0037b)
@@ -83,6 +83,8 @@ Tüm posta kutularının depolanacağı konumu belirtin. Varsayılan /var/vmail/
 
 Posta hesaplarını OpenLDAP'ta saklamayı seçerseniz, iRedMail yükleyicisi LDAP sonekini ayarlamanızı isteyecektir.
 
+Posta hesaplarını MySQL/MariaDB/PostgreSQL'de depolamayı seçerseniz iRedMail yükleyicisi sizin için rastgele, güçlü bir şifre oluşturacaktır. Bunu iRedMail.tips dosyasında bulabilirsiniz.
+
 ![image](https://github.com/user-attachments/assets/7d8f377f-019c-4ded-b006-67f1995fe1ee)
 
 ![image](https://github.com/user-attachments/assets/fdc31b92-42c9-499d-b566-17367e0f7c5d)
@@ -93,6 +95,67 @@ Posta hesaplarını OpenLDAP'ta saklamayı seçerseniz, iRedMail yükleyicisi LD
 
 İlk posta etki alanınızın yönetici hesabının şifresi.
 
-Not:** Bu hesap bir yönetici hesabı ve bir posta kullanıcısıdır. Bu, web postasına ve yönetici paneline (iRedAdmin) bu hesapla giriş yapabileceğiniz anlamına gelir, giriş kullanıcı adı tam e-posta adresidir.
+**Not:** Bu hesap bir yönetici hesabı ve bir posta kullanıcısıdır. Bu, web postasına ve yönetici paneline (iRedAdmin) bu hesapla giriş yapabileceğiniz anlamına gelir, giriş kullanıcı adı tam e-posta adresidir.
+
+## Son Ayarlamalar
+
+iRedMail sunucumuzun gateway sunucumuzu dinlemesi için postfix üzerinden IP adresini yazıyoruz.
+
+```
+nano /etc/postfix/main.cf
+mynetworks = 127.0.0.0/8, [::1]/128, 1.1.1.1 # proxmox mail gateway ip adresinizi yazınız.
+```
+
+### Webmail
+
+Webmail için ise hosts dosyanızın üzerinde aşağıdaki gibi ayarlamalar yapmanız gerekmekte:
+
+```
+sudo hostnamectl set-hostname mail.domain.com
+nano /etc/hosts
+45.152.243.26   mail.domain.com
+reboot
+```
+
+Ek olarak DNS bölgenize de bu şekilde bir kayıt girmeniz gerekmektedir.
+
+### Webmail SSL
+
+Webmail için SSL sertifikası kurmamız gerekmekte. Aşağıdaki komutları çalıştıralım:
+
+
+```
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx -d mail.domain.com
+```
+
+Eğer Nginx üzerinde ilgili domain için bir conf dosyası yok ise hata alabilirsiniz. Almış olacağınız hata çok önemli bir hata değil. Sadece sertifikalarımızın dosya yolu bize gereklidir.
+
+iRedMail SSL sertifika template dosyasını  `sudo nano /etc/nginx/templates/ssl.tmpl` barındırır.
+
+```
+#ssl_certificate /etc/ssl/certs/iRedMail.crt;
+#ssl_certificate_key /etc/ssl/private/iRedMail.key;
+```
+Yorum satırı yaparak bunları devre dışı bırakacağız ve oluşturmuş olduğumuz sertifikaları ekleyeceğiz.
+
+```
+ssl_certificate /etc/letsencrypt/live/domain.com/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/domain.com/privkey.pem;
+```
+
+Conf dosyalarımızda hata olup olmadığını kontrol ediyoruz. bir sorun yok ise yeniden başlatıyoruz.
+
+```
+sudo nginx -t
+sudo systemctl restart ngin
+```
+
+
+
+
+
+
+
 
 
