@@ -46,6 +46,11 @@ Giriş sağladıktan sonra Sol tarafta Mail proxy sayfasına erişiniz.
 
 Sayfa üzerinde bulunan default relay sekmesine iRedMail sunucunuzun IP adresinizi yazınız.
 
+![image](https://github.com/user-attachments/assets/623c18e6-9d1f-49c8-9c3c-e8c2ef95a862)
+
+Tracking Center sayfası üzerinden tarafınıza gelen mailleri görüntüleyebilirsiniz.
+
+
 **Not:** Port olarak 25 kullanmanız önerilir. Eğer 25 portunu kullanacak iseniz bazı VDS sağlayıcıları 25 portunuzun gelen ve giden trafiğini engelleyebilmektedir. Kendilerine bildiride bulunmanız durumunda işlem sağlayabilirler.
 
 Mail Proxmox üzerinde yapılacak ek bir ayar bulunmuyor. Temel olarak bunlar yeterlidir.
