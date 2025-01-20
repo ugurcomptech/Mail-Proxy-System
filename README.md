@@ -117,7 +117,7 @@ Webmail için ise hosts dosyanızın üzerinde aşağıdaki gibi ayarlamalar yap
 ```
 sudo hostnamectl set-hostname mail.domain.com
 nano /etc/hosts
-45.152.243.26   mail.domain.com
+1.1.1.1  mail.domain.com
 reboot
 ```
 
