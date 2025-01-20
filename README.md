@@ -157,8 +157,8 @@ sudo systemctl restart nginx
 
 
 ## Kaynakça
-- [Proxmox Mail Gateway Documentation](https://www.proxmox.com/en/)
-- [iRedMail Official Website](https://www.iredmail.org/)
+- [Proxmox Mail Gateway Documentation](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm)
+- [iRedMail Official Website](https://docs.iredmail.org/install.iredmail.on.debian.ubuntu.html)
 
 
 
