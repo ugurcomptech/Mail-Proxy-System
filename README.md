@@ -38,3 +38,14 @@ Bu komutları yazmanız yeterlidir. Gerekli kurulumlar sağlandıktan sonra aray
 
 ![proxmox1](https://github.com/user-attachments/assets/86521b6a-75b7-48b8-94d8-46780fc1bd91)
 
+Giriş sağladıktan sonra Sol tarafta Mail proxy sayfasına erişiniz.
+
+![image](https://github.com/user-attachments/assets/8fa90eae-5ea9-41af-b9be-2b416451bd4f)
+
+Sayfa üzerinde bulunan default relay sekmesine iRedMail sunucunuzun IP adresinizi yazınız.
+
+![image](https://github.com/user-attachments/assets/7b80f1a6-c864-4650-a869-b6e202df39a5)
+
+
+
+
