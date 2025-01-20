@@ -10,9 +10,7 @@ Bu döküman, Proxmox Mail Gateway (PMG) ile iRedMail arasında bir entegrasyon 
 
 Eğer satın almayı yapmış olduğunuz VDS sağlayıcısında Debian 12 bulunmuyor ise aşağıda iletmiş olduğum döküman üzerindeki adımları takip ederek upgrade işlemleri sağlayabilirsiniz.
 
-https://phoenixnap.com/kb/upgrade-debian-11-to-12
-
-
+[Upgrade Debian 11 to 12](https://phoenixnap.com/kb/upgrade-debian-11-to-12)
 
 ## Mail Proxmox Gateway Kurulum
 
