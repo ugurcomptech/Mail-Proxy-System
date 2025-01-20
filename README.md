@@ -1,7 +1,7 @@
-# İRedMail + Mail Proxmox Gateway
+# İRedMail + Mail Proxmox Gateway Entegrasyonu
 
 
-Bu döküman, Proxmox Mail Gateway (PMG) ile iRedMail arasında bir entegrasyon kurmayı hedefleyen teknik bir rehberdir. PMG, e-posta trafiğini filtreleyip güvenli bir şekilde yönetirken; iRedMail, kullanıcıların e-posta gönderimi ve alımı için kullanılan ana mail sunucusudur.
+Bu döküman, e-posta trafiğini filtrelemek ve güvenli bir şekilde yönetmek için kullanılan Proxmox Mail Gateway (PMG) ile kullanıcıların e-posta gönderip almasını sağlayan iRedMail arasında entegrasyon kurma sürecini adım adım açıklar. Bu rehber sayesinde, iki sistem arasında güvenli ve verimli bir e-posta altyapısı oluşturabilir, spam ve virüs korumasını güçlendirebilirsiniz.
 
 ## Gereksinimler
 
@@ -152,10 +152,13 @@ Conf dosyalarımızda hata olup olmadığını kontrol ediyoruz. bir sorun yok i
 
 ```
 sudo nginx -t
-sudo systemctl restart ngin
+sudo systemctl restart nginx
 ```
 
 
+## Kaynakça
+- [Proxmox Mail Gateway Documentation](https://www.proxmox.com/en/)
+- [iRedMail Official Website](https://www.iredmail.org/)
 
 
 
