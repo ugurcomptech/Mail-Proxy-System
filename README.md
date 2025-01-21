@@ -155,14 +155,31 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
+## PMG Web Arayüz SSL
+
+Buradaki süreç biraz sancılı olabilmekte. O yüzden geçmiş SSL dosyasının yedeğini almanızı öneririm.
+
+Aşağıdaki komutları sırayla yazalım:
+
+```
+ertbot certonly --standalone --key-type rsa -d mail.domain.com
+cat /etc/letsencrypt/live/mail.domain.com/fullchain.pem /etc/letsencrypt/live/mail.domain.com/privkey-rsa.pem > /etc/pmg/pmg-api.pem
+644 /etc/pmg/pmg-api.pem
+chmod 600 /etc/pmg/pmg-api.key
+```
+
+İşlem tamamlandıktan sonra servisimizi restart edeceğiz.
+
+```
+systemctl restart pmgproxy
+```
+
+
+Mail arayüzünüzü açarak kontrol edebilirsiniz.
+
+
 
 ## Kaynakça
 - [Proxmox Mail Gateway Documentation](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm)
 - [iRedMail Official Website](https://docs.iredmail.org/install.iredmail.on.debian.ubuntu.html)
-
-
-
-
-
-
-
+- [Web İnterface SSL](https://forum.proxmox.com/threads/how-to-have-mail-gateway-url-dashboard-with-ssl.108153/)
