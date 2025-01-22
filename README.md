@@ -1,4 +1,6 @@
-# İRedMail + Mail Proxmox Gateway Entegrasyonu
+# iRedMail + Mail Proxmox Gateway Entegrasyonu
+
+![image](https://github.com/user-attachments/assets/fd2ca850-a018-4438-bc29-3567bd67f4d2)
 
 
 Bu döküman, e-posta trafiğini filtrelemek ve güvenli bir şekilde yönetmek için kullanılan Proxmox Mail Gateway (PMG) ile kullanıcıların e-posta gönderip almasını sağlayan iRedMail arasında entegrasyon kurma sürecini adım adım açıklar. Bu rehber sayesinde, iki sistem arasında güvenli ve verimli bir e-posta altyapısı oluşturabilir, spam ve virüs korumasını güçlendirebilirsiniz.
