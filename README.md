@@ -162,7 +162,7 @@ Buradaki süreç biraz sancılı olabilmekte. O yüzden geçmiş SSL dosyasını
 Aşağıdaki komutları sırayla yazalım:
 
 ```
-ertbot certonly --standalone --key-type rsa -d mail.domain.com
+certbot certonly --standalone --key-type rsa -d mail.domain.com
 cat /etc/letsencrypt/live/mail.domain.com/fullchain.pem /etc/letsencrypt/live/mail.domain.com/privkey-rsa.pem > /etc/pmg/pmg-api.pem
 644 /etc/pmg/pmg-api.pem
 chmod 600 /etc/pmg/pmg-api.key
