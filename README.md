@@ -180,6 +180,23 @@ systemctl restart pmgproxy
 Mail arayüzünüzü açarak kontrol edebilirsiniz.
 
 
+## iRedMail Admin
+
+Eğer iRedMail admin hesabınızı unutursanız aşağıdaki dosyayı kontrol ediniz. Sürümünüz değişiklik gösterebilir.
+
+```
+/root/iRedMail-1.7.1/iRedMail.tips 
+```
+
+https://mail.domain.com/iredadmin/ adresi üzerinden ise admin paneline ulaşıp domain oluşturma, user oluşturma gibi işlemleri sağlayabilirsiniz.
+
+
+
+
+
+
+
+
 
 ## Kaynakça
 - [Proxmox Mail Gateway Documentation](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm)
