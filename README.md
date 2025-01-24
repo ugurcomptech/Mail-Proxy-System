@@ -46,6 +46,11 @@ Giriş sağladıktan sonra Sol tarafta Mail proxy sayfasına erişiniz.
 
 Sayfa üzerinde bulunan default relay sekmesine iRedMail sunucunuzun IP adresinizi yazınız.
 
+
+![image](https://github.com/user-attachments/assets/77148d89-577a-4c02-afb7-67b10baddf1f)
+
+Relay Domains kısmından alan adınızı yazınız.
+
 ![image](https://github.com/user-attachments/assets/623c18e6-9d1f-49c8-9c3c-e8c2ef95a862)
 
 Tracking Center sayfası üzerinden tarafınıza gelen mailleri görüntüleyebilirsiniz.
