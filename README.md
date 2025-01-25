@@ -196,7 +196,11 @@ Eğer iRedMail admin hesabınızı unutursanız aşağıdaki dosyayı kontrol ed
 https://mail.domain.com/iredadmin/ adresi üzerinden ise admin paneline ulaşıp domain oluşturma, user oluşturma gibi işlemleri sağlayabilirsiniz.
 
 
+## iRedMail Local Domain Routing
 
+iRedMail, varsayılan yapılandırmasıyla, gönderilen bir e-postanın alıcı domaininin sunucuda yerel olarak tanımlı olup olmadığını kontrol eder. Eğer alıcı domain sunucuda yerel olarak tanımlıysa (örneğin, iRedMail üzerinde bir e-posta hesabı veya sanal domain olarak tanımlıysa), bu durumda e-posta relay sunucusuna yönlendirilmez. Bunun yerine, e-posta doğrudan yerel teslim yapılır.
+
+![image](https://github.com/user-attachments/assets/9ec8e35e-4daf-4851-a0d8-7e0205c9ae3e)
 
 
 
